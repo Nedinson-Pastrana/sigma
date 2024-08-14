@@ -1,0 +1,1 @@
+<?php require 'views/template/nav_admin.php' ;?>
