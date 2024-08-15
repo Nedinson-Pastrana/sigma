@@ -28,7 +28,7 @@
     <header class="app-header"><a class="app-header__logo" 
       
       
-      href="index.html"><img src="./images/logo dash 1.svg" </a>
+      href="index.html"><img src="../../Assets/images/logo dash 1.svg" </a>
 
       
 
@@ -88,8 +88,7 @@
         </li>
       </ul>
     </header>
-   
-
-  
+    
+    
   </body>
 </html>
