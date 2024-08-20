@@ -19,7 +19,7 @@ class LoginModel extends Mysql
         return $request;
     }
 
-}
+
 
     public function sessionLogin(int $iduser)
     {
@@ -37,7 +37,8 @@ class LoginModel extends Mysql
         $request = $this->select($sql);
         $_SESSION['userData'] = $request;
         return $request;
-    }}
+    }
+}
 
 
 

@@ -27,7 +27,7 @@
 
     <!-- header-->
  
-    <?php include '../template/eader_admin.php' ; ?>
+    <?php include '../template/header_admin.php' ; ?>
 
     <!-- navbar-->
   

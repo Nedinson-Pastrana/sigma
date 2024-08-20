@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="../../Assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="<?=media();?>/css/main.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Login - Vali Admin</title>
@@ -16,7 +16,7 @@
     </section>
     <section class="login-content">
       <div class="logo">
-     <img src="../../Assets/images/Blue Modern Software Company Logo.svg" height="120px">
+     <img src="<?=media();?>../../Assets/images/Blue Modern Software Company Logo.svg" height="120px">
       </div>
       <div class="login-box">
         <form class="login-form" action="../dashboard/dashboard.php">
