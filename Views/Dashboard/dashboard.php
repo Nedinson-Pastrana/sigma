@@ -23,20 +23,17 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   </head>
   <body class="app sidebar-mini">
-    <!-- Navbar-->
-    <!-- aqui va el menu del logo -->
-    
-    <header
+
+
+    <!-- header-->
+ 
     <?php include '../template/eader_admin.php' ; ?>
-    </header>
 
-
-
-    <!-- Sidebar menu-->
+    <!-- navbar-->
   
-    <aside 
+  
     <?php include '../template/nav_admin.php' ; ?>
-    </aside>
+ 
 
 
     <main class="app-content">
@@ -82,7 +79,7 @@
 
         <!-- graficas en el inicio -->
 
-      <!-- <div class="row">
+      <div class="row">
         <div class="col-md-6">
           <div class="tile">
             <h3 class="tile-title">Horas semanales</h3>
@@ -100,7 +97,7 @@
           </div>
         </div>
       </div>
-    </main> -->
+    </main> 
 
     <!-- fin de graficas en el inicio -->
 

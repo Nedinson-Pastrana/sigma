@@ -19,7 +19,7 @@
      <img src="../../Assets/images/Blue Modern Software Company Logo.svg" height="120px">
       </div>
       <div class="login-box">
-        <form class="login-form" action="./dashboard.html">
+        <form class="login-form" action="../dashboard/dashboard.php">
           <h3 class="login-head"><i class="bi bi-person me-2"></i>Iniciar Sesión</h3>
           <div class="mb-3">
             <label class="form-label">Usuario</label>
@@ -43,7 +43,7 @@
             <button class="btn btn-success btn-block"><i class="bi bi-box-arrow-in-right me-2 fs-5"></i>INGRESAR</button>
           </div>
         </form>
-        <form class="forget-form" action="./dashboard.html">
+        <form class="forget-form" action="../dashboard/dashboard.php">
           <!-- <h3 class="login-head"><i class="bi bi-person-lock me-2"></i>Forgot Password ?</h3> -->
           <div class="mb-3">
             <label class="form-label">EMAIL</label>
