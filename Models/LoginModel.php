@@ -19,7 +19,28 @@ class LoginModel extends Mysql
         return $request;
     }
 
-
-    
-
 }
+
+    public function sessionLogin(int $iduser)
+    {
+        $this->intIdUsuario = $iduser;
+        //BUSCAR ROL
+        $sql = "SELECT p.ide_usuario,
+							p.identificacion,
+							r.idrol,
+                            r.nombrerol,
+							p.status
+					FROM tbl_usuarios p
+					INNER JOIN rol r
+					ON p.rolid = r.idrol
+					WHERE p.ide_usuario = $this->intIdUsuario";
+        $request = $this->select($sql);
+        $_SESSION['userData'] = $request;
+        return $request;
+    }}
+
+
+
+
+
+
