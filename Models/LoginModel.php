@@ -7,14 +7,14 @@ class LoginModel extends Mysql
     private $strPassword;
 
 
-    public function loginUser(string $identificacion, string $password)
+    public function loginUser(string $usuario, string $password)
     {
         $this->strUsuario = $usuario;
         $this->strPassword = $password;
-        $sql = "SELECT ideusuario ,estado FROM tbl_usuarios WHERE
-					identificacion = '$this->identificacion' and
+        $sql = "SELECT ideusuario ,status FROM tbl_usuarios WHERE
+					identificacion = '$this->strUsuario' and
 					password = '$this->strPassword' and
-					estado != 0 ";
+					status != 0 ";
         $request = $this->select($sql);
         return $request;
     }

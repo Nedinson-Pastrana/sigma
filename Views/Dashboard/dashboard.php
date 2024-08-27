@@ -27,12 +27,14 @@
 
     <!-- header-->
  
-    <?php include '../template/header_admin.php' ; ?>
+    <?php require __DIR__ . '/../Template/header_admin.php'; ?>
 
     <!-- navbar-->
   
   
-    <?php include '../template/nav_admin.php' ; ?>
+    <? require __DIR__ . '/../Template/nav_admin.php'; ?>
+   
+   
  
 
 
@@ -102,9 +104,9 @@
     <!-- fin de graficas en el inicio -->
 
     <!-- Essential javascripts for application to work-->
-    <script src="../../Assets/js/jquery-3.7.0.min.js"></script>
-    <script src="../../Assets/js/bootstrap.min.js"></script>
-    <script src="../../Assets/js/main.js"></script>
+    <script src="<?=base_url();?>/js/jquery-3.7.0.min.js"></script>
+    <script src="<?=base_url();?>/js/bootstrap.min.js"></script>
+    <script src="<?=base_url();?>/Assets/js/main.js"></script>
     <!-- Page specific javascripts-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
     <script type="text/javascript">

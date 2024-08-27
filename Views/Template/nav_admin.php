@@ -18,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="../../Assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="<?=media();?>../../Assets/css/main.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   </head>
@@ -33,14 +33,33 @@
         </div>
       </div>
       <ul class="app-menu">
-        
-        <li><a class="app-menu__item" href="dashboard.html"><i class="app-menu__icon bi bi-house-door"></i><span class="app-menu__label">Inicio</span></a></li>
+          
+      
+        <li><a class="app-menu__item" href="<?=base_url();?>/dashboard"><i class="app-menu__icon bi bi-house-door"></i><span class="app-menu__label">Inicio</span></a></li>
         <li><a class="app-menu__item" href="./programas.html"><i class="app-menu__icon bi bi-clipboard2-check"></i><span class="app-menu__label">Programas</span></a></li>
         <li><a class="app-menu__item" href="./data-table-instructores.html"><i class="app-menu__icon bi bi-people-fill"></i><span class="app-menu__label">Instructores</span></a></li>
         <li><a class="app-menu__item" href="./Competencias.html"><i class="app-menu__icon bi bi-table"></i><span class="app-menu__label">Competencias</span></a></li>
         <li><a class="app-menu__item" href="./reportes.html"><i class="app-menu__icon bi bi-flag-fill"></i><span class="app-menu__label">Reportes</span></a></li>
         <li><a class="app-menu__item" href="./soporte.html"><i class="app-menu__icon bi bi-tools"></i><span class="app-menu__label">Soporte</span></a></li>
-          
+        
+        <?php if (!empty($_SESSION['permisos'][1]['r'])) {?>
+            <li class="treeview">
+                <a class="app-menu__item" href="#" data-toggle="treeview">
+                    <i class="app-menu__icon bi bi-person-gear"></i>
+                    <span class="app-menu__label">Administrador</span>
+                    <i class="treeview-indicator bi bi-chevron-right"></i></a>
+                <ul class="treeview-menu">
+                    <?php if (!empty($_SESSION['permisos'][1]['u'])) {?>
+                    <li>
+                        <a class="treeview-item" href="<?=base_url();?>/roles">
+                            <i class="app-menu__icon bi bi-toggles"></i>
+                            Roles</a>
+                    </li>
+                    <?php }?>
+                </ul>
+            </li>
+            <?php }?>
+        
     </aside>
    
 

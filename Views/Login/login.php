@@ -31,6 +31,15 @@ https://cdn.jsdelivr.net/npm/bootstrap-sweetalert@1.0.1/dist/sweetalert.min.css
       </div>
       <div class="login-box">
         
+     <!-- cargando (opcional) -->
+      <div id="divLoading">
+                <div class="spinner-border visually-hidden" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+            </div>
+     <!-- cargando  fin (opcional) -->
+
+
       <form class="login-form" name="formLogin" id="formLogin" action="">
                 <h3 class="login-head"><i class="bi bi-person me-2"></i>Iniciar Sesión</h3>
 
@@ -56,7 +65,7 @@ https://cdn.jsdelivr.net/npm/bootstrap-sweetalert@1.0.1/dist/sweetalert.min.css
             </form>
 
 
-        <form class="forget-form" action="../dashboard/dashboard.php">
+        <form class="forget-form" action="">
           <!-- <h3 class="login-head"><i class="bi bi-person-lock me-2"></i>Forgot Password ?</h3> -->
           <div class="mb-3">
             <label class="form-label">EMAIL</label>
