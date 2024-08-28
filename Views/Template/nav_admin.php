@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 5, SASS and PUG.js. It's fully customizable and modular.">
-    <!-- Twitter meta-->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:site" content="@pratikborsadiya">
-    <meta property="twitter:creator" content="@pratikborsadiya">
-    <!-- Open Graph Meta-->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Vali Admin">
-    <meta property="og:title" content="Vali - Free Bootstrap 5 admin theme">
-    <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
-    <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
-    <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 5, SASS and PUG.js. It's fully customizable and modular.">
-    <title>Vali Admin - Free Bootstrap 5 Admin Template</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="<?=media();?>../../Assets/css/main.css">
-    <!-- Font-icon css-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  </head>
- 
-    <!-- Sidebar menu-->
+<!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
       <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Image">
@@ -44,24 +19,16 @@
         
         <?php if (!empty($_SESSION['permisos'][1]['r'])) {?>
             <li class="treeview">
-                <a class="app-menu__item" href="#" data-toggle="treeview">
-                    <i class="app-menu__icon bi bi-person-gear"></i>
-                    <span class="app-menu__label">Administrador</span>
-                    <i class="treeview-indicator bi bi-chevron-right"></i></a>
-                <ul class="treeview-menu">
-                    <?php if (!empty($_SESSION['permisos'][1]['u'])) {?>
-                    <li>
-                        <a class="treeview-item" href="<?=base_url();?>/roles">
-                            <i class="app-menu__icon bi bi-toggles"></i>
-                            Roles</a>
-                    </li>
-                    <?php }?>
-                </ul>
-            </li>
-            <?php }?>
+        <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon bi bi-person-gear"></i>
+        <span class="app-menu__label">Administrador</span> <i class="treeview-indicator bi bi-chevron-right"></i></a>
+        <ul class="treeview-menu">
+        <?php if (!empty($_SESSION['permisos'][1]['u'])) {?>
+        <li>
+        <a class="treeview-item" href="<?=base_url();?>/roles">
+        <i class="app-menu__icon bi bi-toggles"></i> Roles</a></li><?php }?></ul></li><?php }?>
         
+            
+            <li><a class="app-menu__item logout-btn" class="logout-bt" href="Logout"><i class="app-menu__icon  bi bi-box-arrow-right"></i><span class="app-menu__label">Cerrar Sesión</span></a></li>
     </aside>
-   
-
   </body>
 </html>

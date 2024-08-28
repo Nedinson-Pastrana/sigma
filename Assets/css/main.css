@@ -13565,6 +13565,19 @@ src: url(/docs/fonts/MonumentExtended-Regular.otf);
   text-decoration: none;
 }
 
+/* boton cerrar sesion */
+.logout-btn {
+  background-color: #0d98d8a1; /* Color de fondo */
+  color: white; /* Color del texto */
+}
+
+.logout-btn:hover {
+  background-color: #ff1a1a; /* Color de fondo al pasar el mouse */
+  color: white; /* Color del texto al pasar el mouse */
+}
+
+
+
 .app-nav {
   display: -webkit-box;
   display: -ms-flexbox;

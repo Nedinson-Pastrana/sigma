@@ -114,8 +114,5 @@ https://cdn.jsdelivr.net/npm/bootstrap-sweetalert@1.0.1/dist/sweetalert.min.css
 
     <script src="<?=media();?>/js/<?=$data['page_functions_js'];?>"></script>
 
-
- 
-   
   </body>
 </html>

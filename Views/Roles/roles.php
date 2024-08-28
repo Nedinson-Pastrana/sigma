@@ -19,6 +19,7 @@ getModal('modalRoles', $data);
             <li class="breadcrumb-item"><a href="<?=base_url();?>/roles"><?=$data['page_title']?></a></li>
         </ul>
     </div>
+    <?php require __DIR__ . '/../Template/nav_admin.php'; ?>
 
     <div class="row">
         <div class="col-md-12">

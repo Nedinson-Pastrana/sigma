@@ -1,44 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 5, SASS and PUG.js. It's fully customizable and modular.">
-    <!-- Twitter meta-->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:site" content="@pratikborsadiya">
-    <meta property="twitter:creator" content="@pratikborsadiya">
-    <!-- Open Graph Meta-->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Vali Admin">
-    <meta property="og:title" content="Vali - Free Bootstrap 5 admin theme">
-    <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
-    <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
-    <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 5, SASS and PUG.js. It's fully customizable and modular.">
-    <title>Vali Admin - Free Bootstrap 5 Admin Template</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="../../Assets/css/main.css">
-    <!-- Font-icon css-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  </head>
-  <body class="app sidebar-mini">
+<?php require __DIR__ . '/../Template/header_admin.php'; ?>
+<?php require __DIR__ . '/../Template/nav_admin.php'; ?>
 
 
-    <!-- header-->
- 
-    <?php require __DIR__ . '/../Template/header_admin.php'; ?>
-
-    <!-- navbar-->
-  
-  
-    <? require __DIR__ . '/../Template/nav_admin.php'; ?>
-   
-   
- 
-
-
-    <main class="app-content">
+<body class="app sidebar-mini">
+  <main class="app-content">
       <div class="app-title">
         <div>
           <h1><i class="bi bi-house-door me-2"></i>Inicio</h1>
@@ -50,9 +15,9 @@
         </ul>
       </div>
       <div class="row">
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
           <div class="widget-small primary coloured-icon">
-
+            
             <i class="icon bi bi-people fs-1"></i>
             
             <div class="info">
@@ -61,15 +26,15 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
           <div class="widget-small info coloured-icon"><i class="icon bi bi-clipboard2-check"></i>
-            <div class="info">
-              <h4>PROGRAMAS</h4>
+          <div class="info">
+            <h4>PROGRAMAS</h4>
               <p><b>25</b></p>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
           <div class="widget-small warning coloured-icon"><i class="icon bi bi-table"></i>
             <div class="info">
               <h4>COMPETENCIA</h4>
@@ -77,11 +42,11 @@
             </div>
           </div>
         </div>
-    
+        
 
         <!-- graficas en el inicio -->
-
-      <div class="row">
+        
+        <div class="row">
         <div class="col-md-6">
           <div class="tile">
             <h3 class="tile-title">Horas semanales</h3>
@@ -101,18 +66,13 @@
       </div>
     </main> 
 
-    <!-- fin de graficas en el inicio -->
-
-    <!-- Essential javascripts for application to work-->
-    <script src="<?=base_url();?>/js/jquery-3.7.0.min.js"></script>
-    <script src="<?=base_url();?>/js/bootstrap.min.js"></script>
-    <script src="<?=base_url();?>/Assets/js/main.js"></script>
+  
     <!-- Page specific javascripts-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
     <script type="text/javascript">
       const salesData = {
       	xAxis: {
-      		type: 'category',
+          type: 'category',
       		data: ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo']
       	},
       	yAxis: {
@@ -135,20 +95,20 @@
       }
       
       const supportRequests = {
-      	tooltip: {
-      		trigger: 'item'
+        tooltip: {
+          trigger: 'item'
       	},
       	legend: {
-      		orient: 'vertical',
+          orient: 'vertical',
       		left: 'left'
       	},
       	series: [
-      		{
+          {
       			name: 'Support Requests',
       			type: 'pie',
       			radius: '50%',
       			data: [
-      				{ value: 300, name: 'Completada' },
+              { value: 300, name: 'Completada' },
       				{ value: 50, name: 'Faltantes' },
       				{ value: 100, name: 'Terminado' }
       			],
@@ -172,17 +132,19 @@
       const supportChart = echarts.init(supportChartElement, null, { renderer: 'svg' });
       supportChart.setOption(supportRequests);
       new ResizeObserver(() => supportChart.resize()).observe(supportChartElement);
-    </script>
+      </script>
     <!-- Google analytics script-->
     <script type="text/javascript">
       if(document.location.hostname == 'pratikborsadiya.in') {
       	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       	ga('create', 'UA-72504830-1', 'auto');
       	ga('send', 'pageview');
       }
     </script>
+
   </body>
-</html>
+  
+  <?php require __DIR__ . '/../Template/footer_admin.php'; ?>
