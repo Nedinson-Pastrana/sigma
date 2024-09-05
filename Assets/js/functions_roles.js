@@ -25,17 +25,6 @@ document.addEventListener('DOMContentLoaded', function(){
         "order":[[0,"desc"]]  
     });
 
- 
-// $('#tableRoles').DataTable();
-// $(document).ready(function() {
-//     $('#tableRoles').DataTable({
-//         responsive: true,
-//         language: {
-//             url: '../js/es.json', //Ubicacion del archivo con el json del idioma.
-//         }
-//     });
-// });
-
 
     //NUEVO ROL
     var formRol = document.querySelector("#formRol");
@@ -80,8 +69,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 });
 
-// $('#tableRoles').DataTable();
-
 function openModal(){
 
     document.querySelector('#idRol').value ="";
@@ -121,27 +108,13 @@ function fntEditRol(idrol){
                 document.querySelector("#txtNombre").value = objData.data.nombrerol;
                 document.querySelector("#txtDescripcion").value = objData.data.descripcion;
 
-                // if(objData.data.status == 1)
-                // {
-                //     var optionSelect = '<option value="1" selected class="notBlock">Activo</option>';
-                // }else{
-                //     var optionSelect = '<option value="2" selected class="notBlock">Inactivo</option>';
-                // }
-                // var htmlSelect = `${optionSelect}
-                //                   <option value="1">Activo</option>
-                //                   <option value="2">Inactivo</option>
-                //                 `;
-                // document.querySelector("#listStatus").innerHTML = htmlSelect;
-
-
-                                // ESTADO ACTIVO O INACTIVO
+                // ESTADO ACTIVO O INACTIVO
                 // $('#listStatus').selectpicker('render');
                 if(objData.data.status == 1){
                     document.querySelector("#listStatus").value = 1;
                 }else{
                     document.querySelector("#listStatus").value = 2;
                 }
-
 
                 $('#modalFormRol').modal('show');
             }else{

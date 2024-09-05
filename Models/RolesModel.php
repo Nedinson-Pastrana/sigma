@@ -19,7 +19,6 @@ class RolesModel extends Mysql
             $whereAdmin = " and idrol != 1 ";
         }
         //EXTRAER ROLES
-        // $sql = "SELECT * FROM rol WHERE status != 0" . $whereAdmin;
         $sql = "SELECT * FROM rol WHERE status != 0".$whereAdmin;
         $request = $this->select_all($sql);
         return $request;

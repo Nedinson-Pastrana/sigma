@@ -24,5 +24,3 @@ class Errors extends Controllers
 
 $notFound = new Errors();
 $notFound->notFound();
-
-

@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 			if(strIdentificacion == "" || strPassword == "")
 			{
-				swal("Por favor", "Escribe la identificación y la contraseña.", "error");
-				// swal({   title: "Por favor",   text: "Escribe la identificación y la contraseña",   imageUrl: "../../Assets/images/Blue Modern Software Company Logo.svg" });
+				// swal("Por favor", "Escribe la identificación y la contraseña.", "warning");
+				swal({   title: "Por favor",   text: "Escribe la identificación y la contraseña",   imageUrl: "Assets/images/warning.svg" });
 				return false;
 			}else{
 				divLoading.style.display = "flex";

@@ -1,9 +1,4 @@
-<body>  <!-- Footer -->
-    
- <!-- Font-icon css-->
- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
- <script>
+<script>
 const base_url = "<?=base_url();?>";
 </script>
 
@@ -58,12 +53,3 @@ https://cdn.jsdelivr.net/npm/bootstrap-sweetalert@1.0.1/dist/sweetalert.min.js
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-

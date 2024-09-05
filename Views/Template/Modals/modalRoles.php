@@ -24,16 +24,11 @@
                                     placeholder="Descripción del rol" required=""></textarea>
                             </div>
                             <div class="modal-body">
-                                <!-- <label for="exampleSelect1">Estado</label> -->
-                                <!-- <select class="form-control" id="listStatus" name="listStatus" required="">
-                                    <option value="1">Activo</option>
-                                    <option value="2">Inactivo</option>
-                                </select> -->
 
                                 <select class="form-select" id="listStatus" name="listStatus" required=""
                                     aria-label="Default select example">
                                     <label for="exampleSelect1">Estado</label>
-                                    <!-- <option selected>Open this select menu</option> -->
+                                    <!-- <option selected>Estado</option> -->
                                     <option value="1">Activo</option>
                                     <option value="2">Inactivo</option>
                                 </select>

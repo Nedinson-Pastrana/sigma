@@ -1,21 +1,15 @@
 <?php
-const BASE_URL = "http://localhost/sigma";
-
+const BASE_URL = "http://localhost/sigma-tps";
 
 //Zona horaria
 date_default_timezone_set('America/Bogota');
 
-
 //Datos de conexión a Base de Datos
-const DB_HOST = "localhost";
+const DB_HOST = "localhost:3307";
 const DB_NAME = "sigma";
 const DB_USER = "root";
 const DB_PASSWORD = "";
 const DB_CHARSET = "utf8";
-
-//Deliminadores decimal y millar Ej. 24,1989.00
-const SPD = ".";
-const SPM = ",";
 
 //Datos envio de correo
 const NOMBRE_REMITENTE = "SENA La Jagua";
@@ -42,17 +36,14 @@ const KEY = 'joseramos';
 const METHODENCRIPT = "AES-128-ECB";
 
 //Módulos
-const MDADMINISTRADOR = 1;
-const MDPROGRAMAS = 2;
-const MDINICIO = 6;
-
+const MDASHBOARD = 1;
+const MUSUARIOS = 2;
+const MROLES= 3;
+const MPROGRAMAS= 4;
 
 //Páginas
 const PINICIO = 1;
 
-
 //Roles
 const RADMINISTRADOR = 1;
 const RCOORDINADOR = 2;
-const RADMINISTRATIVO = 3;
-const RINSTRUCTOR = 4;

@@ -11,7 +11,7 @@ class Dashboard extends Controllers
             header('Location: ' . base_url() . '/login');
             die();
         }
-        getPermisos(MDADMINISTRADOR);
+        getPermisos(MDASHBOARD);
     }
 
     public function dashboard()
@@ -21,11 +21,12 @@ class Dashboard extends Controllers
         $data['page_title'] = " Administrador - Sigma";
         $data['page_name'] = "Administrador";
         $data['page_functions_js'] = "functions_dashboard.js";
-        // $data['usuarios'] = $this->model->cantUsuarios();
-        // $data['programas'] = $this->model->cantProgramas();
+        $data['usuarios'] = $this->model->cantUsuarios();
+        $data['programas'] = $this->model->cantProgramas();
+        $data['competencias'] = $this->model->cantCompetencias();
 
         if ($_SESSION['userData']['idrol'] == RCOORDINADOR) {
-            $this->views->getView($this, "dashboardCliente", $data);
+            $this->views->getView($this, "dashboardCoordinador", $data);
         } else {
             $this->views->getView($this, "dashboard", $data);
         }

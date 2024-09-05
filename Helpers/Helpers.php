@@ -1,5 +1,8 @@
 <?php
 
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+
 //Retorna la url del proyecto
 function base_url()
 {
@@ -20,16 +23,6 @@ function footerAdmin($data = "")
     $view_footer = "Views/Template/footer_admin.php";
     require_once $view_footer;
 }
-// function headerTienda($data = "")
-// {
-//     $view_header = "Views/Template/header_tienda.php";
-//     require_once $view_header;
-// }
-// function footerTienda($data = "")
-// {
-//     $view_footer = "Views/Template/footer_tienda.php";
-//     require_once $view_footer;
-// }
 
 //Muestra información formateada
 function dep($data)
@@ -196,13 +189,6 @@ function token()
     $token = $r1 . '-' . $r2 . '-' . $r3 . '-' . $r4;
     return $token;
 }
-//Formato para valores monetarios
-function formatMoney($cantidad)
-{
-    $cantidad = number_format($cantidad, 2, SPD, SPM);
-    return $cantidad;
-}
-
 
 
 function CurlConnectionGet(string $ruta, string $contentType = null, string $token)
@@ -260,6 +246,24 @@ function CurlConnectionPost(string $ruta, string $contentType = null, string $to
     return $request;
 }
 
+function Meses()
+{
+    $meses = array(
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre",
+    );
+    return $meses;
+}
 
 function getCatFooter()
 {
