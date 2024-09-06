@@ -14203,8 +14203,19 @@ src: url(/docs/fonts/MonumentExtended-Regular.otf);
 
 .material-half-bg {
   height: 100vh;
-  background-color: #e7e7e7;
+  /* background-color: #e7e7e7; */
   position: fixed;
+  
+  /* imagen de fondo del login sena  */
+  background-image: url('../../Assets/images/sigma.jpg');
+  background-size: 100% 100%; /* La imagen se ajusta al tamaño del contenedor */
+  background-position: center; /* Centra la imagen dentro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Mantiene la imagen fija en el fondo */
+  filter: brightness(0.4); /*la opacidad*/
+  text-align: center;
+  background-repeat: no-repeat; /*evita repertirse*/
+  
   top: 0;
   left: 0;
   right: 0;
@@ -14214,10 +14225,10 @@ src: url(/docs/fonts/MonumentExtended-Regular.otf);
 
 /* COLOR DE FONDO DE ARRIBA */
 
-.material-half-bg .cover {
+/* .material-half-bg .cover {
   background-color: #00304D ;
   height: 50vh;
-}
+} */
 
 .m-loader {
   position: relative;
