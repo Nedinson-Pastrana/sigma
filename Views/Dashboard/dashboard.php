@@ -61,21 +61,5 @@
         </a>
     </div>
     <?php }?>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </main>
 <?php footerAdmin($data);?>

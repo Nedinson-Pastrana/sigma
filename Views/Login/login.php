@@ -27,7 +27,7 @@ https://cdn.jsdelivr.net/npm/bootstrap-sweetalert@1.0.1/dist/sweetalert.min.css
     </section>
     <section class="login-content">
         <div class="logo">
-        <img src="<?=media();?>/images/Blue Modern Software Company Logo.svg" height="120px">
+        <img src="<?=media();?>/images/Blue Modern Software Company Logo.svg" height="110px">
         </div>
         <div class="login-box">
             <div id="divLoading">
@@ -39,19 +39,12 @@ https://cdn.jsdelivr.net/npm/bootstrap-sweetalert@1.0.1/dist/sweetalert.min.css
             <form class="login-form" name="formLogin" id="formLogin" action="">
                 <h3 class="login-head"><i class="bi bi-person me-2"></i>Bienvenidos</h3>
 
-
-                <!-- <div class="input-group flex-nowrap">
-                         <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person-fill"></i></span>
-                          <input id ="id="txtIdentificacion" name="txtIdentificacion" class="form-control" type="number"
-                        placeholder="Identificación" autofocus">
-                 </div> -->
-
                  <i class="bi bi-person-fill boton1">
                     
                  </i>
 
-                 <div class="mb-4">
-                    <label class="form-label">Identificación</label>
+                 <div class="mb-3">
+                    <label class="form-label"></label>
                     <input id="txtIdentificacion" name="txtIdentificacion" class="form-control" type="number"
                         placeholder="Usuario">
                 </div>
@@ -60,13 +53,11 @@ https://cdn.jsdelivr.net/npm/bootstrap-sweetalert@1.0.1/dist/sweetalert.min.css
                     
                     </i>
 
-                <div class="mb-4">
-                    <label class="form-label">Contraseña</label>
+                <div class="mb-3">
+                    <label class="form-label"></label>
                     <input id="txtPassword" name="txtPassword" class="form-control" type="password"
                         placeholder="Password">
                 </div>
-
-
 
                 <div id="alertLogin" class="text-center"></div>
 

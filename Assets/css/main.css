@@ -86,7 +86,8 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg: #FFF;
+  /* --bs-body-bg: #FFF; */
+  --bs-body-bg: #4541410f;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
@@ -109,7 +110,8 @@
   --bs-highlight-bg: #fff3cd;
   --bs-border-width: 1px;
   --bs-border-style: solid;
-  --bs-border-color: #dee2e6;
+  /* --bs-border-color: #dee2e6; */
+  --bs-border-color: #a4a4a4fc;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
   --bs-border-radius: 0.375rem;
   --bs-border-radius-sm: 0.25rem;
@@ -2375,7 +2377,7 @@ progress {
 .boton1 {
 
 position: absolute;
-top: 147px;
+top: 139px;
 left: 280px;
 
 
@@ -2384,19 +2386,11 @@ left: 280px;
 .boton2 {
 
   position: absolute;
-  top: 237px;
+  top: 212px;
   left: 281px;
   
   
   }
-
-
-
-
-
-
-
-
 
 
 .form-control {
@@ -2413,7 +2407,7 @@ left: 280px;
   background-color: var(--bs-body-bg);
   background-clip: padding-box;
   border: 2px solid var(--bs-border-color);
-  border-radius: 9px;
+  border-radius: 20px;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3319,7 +3313,7 @@ textarea.form-control-lg {
   --bs-btn-bg: transparent;
   --bs-btn-border-width: 2px;
   --bs-btn-border-color: transparent;
-  --bs-btn-border-radius: 3px;
+  --bs-btn-border-radius: 20px;
   --bs-btn-hover-border-color: transparent;
   --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   --bs-btn-disabled-opacity: 0.65;
@@ -6184,7 +6178,8 @@ input[type="number"]::-webkit-outer-spin-button {
   border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
   border-radius: var(--bs-modal-border-radius);
   outline: 0;
-  background-color: #fafafa;
+ /* lo comente para permitir el modo oscuro
+  background-color: #fafafa; */
   
 }
 
@@ -8187,6 +8182,9 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .d-grid {
   display: grid !important;
+  /* posicion del boton iniciar sesion */
+  margin-top: 16%;
+  
 }
 
 .d-inline-grid {
@@ -9433,7 +9431,8 @@ input[type="number"]::-webkit-outer-spin-button {
 /* rtl:end:remove */
 .text-primary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+ color:  rgb(255 61 61) !important;
+  /* color: rgba(var(255 61 61), var(--bs-text-opacity)) !important; */
 }
 
 .text-secondary {
@@ -13447,7 +13446,8 @@ input[type="number"]::-webkit-outer-spin-button {
   min-height: calc(100vh - 50px);
   margin-top: 50px;
   padding: 30px;
-  background-color: #E5E5E5;
+  /* lo comente para que me dejara hacer el modo dark */
+  /* background-color: #E5E5E5; */
   -webkit-transition: margin-left 0.3s ease;
   transition: margin-left 0.3s ease;
 }
@@ -14056,7 +14056,8 @@ src: url(/docs/fonts/MonumentExtended-Regular.otf);
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: #FFF;
+    /* lo comente para que me dejara hacer el modo dark */       
+  /* background-color: #FFF; */
   margin: -30px -30px 30px;
   padding: 20px 30px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -14114,7 +14115,8 @@ src: url(/docs/fonts/MonumentExtended-Regular.otf);
 
 .tile {
   position: relative;
-  background: #ffffff;
+   /* lo comente para que me dejara hacer el modo dark */
+  /* background: #ffffff; */
   border-radius: 3px;
   padding: 20px;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
@@ -14212,7 +14214,7 @@ src: url(/docs/fonts/MonumentExtended-Regular.otf);
   background-position: center; /* Centra la imagen dentro del contenedor */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-attachment: fixed; /* Mantiene la imagen fija en el fondo */
-  filter: brightness(0.4); /*la opacidad*/
+  filter: brightness(0.2); /*la opacidad*/
   text-align: center;
   background-repeat: no-repeat; /*evita repertirse*/
   
@@ -14690,6 +14692,14 @@ src: url(/docs/fonts/MonumentExtended-Regular.otf);
   min-width: 350px;
   min-height: 390px;
   background-color: #fff;
+
+/* efecto blur en el contenedor del login */
+/* background: #fafafa10;
+backdrop-filter: blur(0.4rem);
+-webkit-backdrop-filter: blur(0.4rem); */
+
+
+
   -webkit-box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
   -webkit-perspective: 800px;
