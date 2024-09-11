@@ -10,8 +10,9 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ 
 :root,
-[data-bs-theme=light] {
+[data-bs-theme="light"] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -86,8 +87,7 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-color-rgb: 33, 37, 41;
-  /* --bs-body-bg: #FFF; */
-  --bs-body-bg: #4541410f;
+  --bs-body-bg: #FFF;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
@@ -110,8 +110,7 @@
   --bs-highlight-bg: #fff3cd;
   --bs-border-width: 1px;
   --bs-border-style: solid;
-  /* --bs-border-color: #dee2e6; */
-  --bs-border-color: #a4a4a4fc;
+  --bs-border-color: #dee2e6;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
   --bs-border-radius: 0.375rem;
   --bs-border-radius-sm: 0.25rem;
@@ -189,6 +188,65 @@
   --bs-form-invalid-color: #ea868f;
   --bs-form-invalid-border-color: #ea868f;
 }
+
+/* Tema claro */
+[data-bs-theme="light"] .app-title {
+  background-color: #ffffff; /* Fondo claro */
+  color: #000000; /* Texto oscuro */
+}
+
+/* Tema oscuro */
+[data-bs-theme="dark"] .app-title {
+  background-color: #1a1a1a; /* Fondo oscuro */
+  color: #ffffff; /* Texto claro */
+}
+
+/* Tema claro */
+[data-bs-theme="light"] .title {
+  background: #ffffff; /* Fondo blanco para el tema claro */
+  color: #000000; /* Texto oscuro */
+  
+}
+
+/* Tema oscuro */
+[data-bs-theme="dark"] .title {
+  background: #2c2c2c; /* Fondo oscuro para el tema oscuro */
+  color: #f8f9fa; /* Texto claro */
+ 
+}
+
+
+
+/* Tema claro */
+[data-bs-theme="light"] .app-content {
+  background-color: #f8f9fa; /* Fondo de contenido claro */
+  color: #212529; /* Texto de contenido oscuro */
+}
+
+/* Tema oscuro */
+[data-bs-theme="dark"] .app-content {
+  background-color: #2c2c2c; /* Fondo de contenido oscuro */
+  color: #f8f9fa; /* Texto claro */
+}
+
+
+/* Tema claro */
+[data-bs-theme="light"] .modal-content {
+  background-color: #ffffff; /* Fondo blanco para el tema claro */
+  color: #000000; /* Texto oscuro */
+}
+
+/* Tema oscuro */
+[data-bs-theme="dark"] .modal-content {
+  background-color: #333333; /* Fondo oscuro para el tema oscuro */
+  color: #f8f9fa; /* Texto claro */
+}
+
+
+
+
+
+
 
 *,
 *::before,
@@ -6178,8 +6236,8 @@ input[type="number"]::-webkit-outer-spin-button {
   border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
   border-radius: var(--bs-modal-border-radius);
   outline: 0;
- /* lo comente para permitir el modo oscuro
-  background-color: #fafafa; */
+ /* comente para permitir el modo oscuro */
+  /* background-color: #fafafa; */
   
 }
 
@@ -13446,8 +13504,8 @@ input[type="number"]::-webkit-outer-spin-button {
   min-height: calc(100vh - 50px);
   margin-top: 50px;
   padding: 30px;
-  /* lo comente para que me dejara hacer el modo dark */
-  /* background-color: #E5E5E5; */
+  /* lo comente para que me dejara hacer el modo dark  */
+  /* background-color: #E5E5E5;  */
   -webkit-transition: margin-left 0.3s ease;
   transition: margin-left 0.3s ease;
 }
@@ -14056,7 +14114,7 @@ src: url(/docs/fonts/MonumentExtended-Regular.otf);
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-    /* lo comente para que me dejara hacer el modo dark */       
+    /* lo comente para que me dejara hacer el modo dark     */
   /* background-color: #FFF; */
   margin: -30px -30px 30px;
   padding: 20px 30px;
@@ -14115,8 +14173,8 @@ src: url(/docs/fonts/MonumentExtended-Regular.otf);
 
 .tile {
   position: relative;
-   /* lo comente para que me dejara hacer el modo dark */
-  /* background: #ffffff; */
+   /* lo comente para que me dejara hacer el modo dark  */
+  /* background: #ffffff;  */
   border-radius: 3px;
   padding: 20px;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
