@@ -61,5 +61,24 @@
         </a>
     </div>
     <?php }?>
+
+    <div class="row">
+        <div class="col-md-6">
+              <div id="salesChart"></div>
+            </div>  
+          </div>  
+        </div>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Gestion de Horas - Mensuales</h3>
+            <div class="ratio ratio-16x9">
+              <div id="salesChart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
 </main>
+
+
 <?php footerAdmin($data);?>
