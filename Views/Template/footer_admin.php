@@ -111,6 +111,82 @@ https://cdn.jsdelivr.net/npm/bootstrap-sweetalert@1.0.1/dist/sweetalert.min.js
 
 <script src="<?=media();?>/js/datepicker/jquery-ui.min.js"></script>
 
-</body>
 
+<script type="text/javascript">
+      const salesData = {
+      	xAxis: {
+      		type: 'category',
+      		data: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul' , 'Ago' , 'Sep' , 'Oct' , 'Nov' , 'Dici' ,]
+      	},
+      	yAxis: {
+      		type: 'value',
+      		axisLabel: {
+      			formatter: '{value}'
+      		}
+      	},
+      	series: [
+      		{
+      			data: [15, 34, 22, 12, 135, 12, 26 , 22 , 44, 33, 55, 33],
+      			type: 'line',
+      			smooth: true
+      		}
+      	],
+      	tooltip: {
+      		trigger: 'axis',
+      		formatter: "<b>{b0}:</b> {c0}"
+      	}
+      }
+      
+      const supportRequests = {
+      	tooltip: {
+      		trigger: 'item'
+      	},
+      	legend: {
+      		orient: 'vertical',
+      		left: 'left'
+      	},
+      	series: [
+      		{
+      			name: 'Support Requests',
+      			type: 'pie',
+      			radius: '50%',
+      			data: [
+      				{ value: 300, name: 'Completada' },
+      				{ value: 50, name: 'Faltantes' },
+      				{ value: 100, name: 'Terminado' }
+      			],
+      			emphasis: {
+      				itemStyle: {
+      					shadowBlur: 10,
+      					shadowOffsetX: 0,
+      					shadowColor: 'rgba(0, 0, 0, 0.5)'
+      				}
+      			}
+      		}
+      	]
+      };
+      
+      const salesChartElement = document.getElementById('salesChart');
+      const salesChart = echarts.init(salesChartElement, null, { renderer: 'svg' });
+      salesChart.setOption(salesData);
+      new ResizeObserver(() => salesChart.resize()).observe(salesChartElement);
+      
+      const supportChartElement = document.getElementById("supportRequestChart")
+      const supportChart = echarts.init(supportChartElement, null, { renderer: 'svg' });
+      supportChart.setOption(supportRequests);
+      new ResizeObserver(() => supportChart.resize()).observe(supportChartElement);
+    </script>
+    <!-- Google analytics script-->
+    <script type="text/javascript">
+      if(document.location.hostname == 'pratikborsadiya.in') {
+      	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      	ga('create', 'UA-72504830-1', 'auto');
+      	ga('send', 'pageview');
+      }
+    </script>
+
+</body>
 </html>

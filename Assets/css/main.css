@@ -14453,10 +14453,19 @@ src: url(/docs/fonts/MonumentExtended-Regular.otf);
 .widget-small.primary {
   background-color: #00695C;
 }
-.widget-small.primary.coloured-icon {
+
+/* botones del dashboard */
+[data-bs-theme="light"] .widget-small.primary.coloured-icon {
   background-color: #fff;
   color: #2a2a2a;
 }
+
+/* botones del dashboard */
+[data-bs-theme="dark"] .widget-small.primary.coloured-icon {
+  background-color: black;
+  color: #fff;
+}
+
 .widget-small.primary.coloured-icon .icon {
   background-color: #00695C;
   color: #fff;
@@ -14464,10 +14473,19 @@ src: url(/docs/fonts/MonumentExtended-Regular.otf);
 .widget-small.info {
   background-color: #0dcaf0;
 }
-.widget-small.info.coloured-icon {
+
+/* botones del dashboard */
+[data-bs-theme="light"] .widget-small.info.coloured-icon {
   background-color: #fff;
   color: #2a2a2a;
 }
+
+/* botones del dashboard */
+[data-bs-theme="dark"] .widget-small.info.coloured-icon {
+  background-color: black;
+  color: #fff;
+}
+
 .widget-small.info.coloured-icon .icon {
   background-color: #0dcaf0;
   color: #fff;
