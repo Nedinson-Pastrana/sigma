@@ -3260,6 +3260,21 @@ textarea.form-control-lg {
   margin-top: 0.25rem;
   font-size: 0.875em;
   color: var(--bs-form-invalid-color);
+} */
+
+/* INPUT DEL LOGIN  */
+
+.position-relative {
+  position: relative;
+}
+
+.icon-input {
+  font-size: 0.9rem; /* Tamaño del icono */
+  color: #6c757d; /* Color del icono, ajusta según sea necesario */
+  top: 67%;
+  transform: translateY(-50%); /* Centra verticalmente el icono */
+  left: 16px; /* Ajusta el espacio a la izquierda del campo de entrada */
+  pointer-events: none; /* Asegúrate de que el icono no interfiera con la interacción del campo de entrada */
 }
 
 .form-control {
