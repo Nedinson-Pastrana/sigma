@@ -3254,13 +3254,48 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.invalid-feedback {
+/* .invalid-feedback {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
   font-size: 0.875em;
   color: var(--bs-form-invalid-color);
 }
+
+.form-control {
+  padding-left: 2.5rem; /* Ajusta el padding a la izquierda para dejar espacio para el icono */
+}
+
+.invalid-feedback {
+  position: absolute;
+  top: calc(100% + 0.25rem); /* Coloca el mensaje justo debajo del campo de entrada */
+  left: 0;
+  width: 100%;
+  font-size: 0.875em;
+  color: #dc3545;
+  display: none;
+  margin-top: 0.25rem;
+  box-sizing: border-box;
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545; /* Color del borde del campo de entrada cuando hay error */
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+
+
 
 .invalid-tooltip {
   position: absolute;

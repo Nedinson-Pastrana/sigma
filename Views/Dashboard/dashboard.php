@@ -68,20 +68,33 @@
           <div class="tile">
             <h3 class="tile-title">Horas Mensuales</h3>
             <div class="ratio ratio-16x9">
-              <div id="salesChart"></div>
+              <div id="calendar"></div>
             </div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Horas</h3>
+            <div class="tile">
+                <h3 class="tile-title">Horas</h3>
             <div class="ratio ratio-16x9">
-              <div id="supportRequestChart"></div>
+                <canvas id="hoursChart"></canvas>
             </div>
           </div>
         </div>
       </div>
+      
+      <div class="col-md-6">
+            <div class="tile">
+                <h3 class="tile-title"> Progreso </h3>
+            <div class="ratio ratio-16x9">
+                <canvas id="monthlyProgressChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </main>
+    
 
 </main>
 

@@ -112,81 +112,129 @@ https://cdn.jsdelivr.net/npm/bootstrap-sweetalert@1.0.1/dist/sweetalert.min.js
 <script src="<?=media();?>/js/datepicker/jquery-ui.min.js"></script>
 
 
-<script type="text/javascript">
-      const salesData = {
-      	xAxis: {
-      		type: 'category',
-      		data: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul' , 'Ago' , 'Sep' , 'Oct' , 'Nov' , 'Dici' ,]
-      	},
-      	yAxis: {
-      		type: 'value',
-      		axisLabel: {
-      			formatter: '{value}'
-      		}
-      	},
-      	series: [
-      		{
-      			data: [15, 34, 22, 12, 135, 12, 26 , 22 , 44, 33, 55, 33],
-      			type: 'line',
-      			smooth: true
-      		}
-      	],
-      	tooltip: {
-      		trigger: 'axis',
-      		formatter: "<b>{b0}:</b> {c0}"
-      	}
+<!-- FullCalendar CSS -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet">
+
+<!-- FullCalendar JS -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales/es.js"></script> <!-- Archivo de localización en español -->
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var barChart;
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      locale: 'es',
+      firstDay: 0,
+      dateClick: function(info) {
+        var fecha = info.dateStr;
+
+        document.querySelectorAll('.fc-daygrid-day.fc-selected').forEach(function(el) {
+          el.classList.remove('fc-selected');
+        });
+
+        info.dayEl.classList.add('fc-selected');
+
+        cargarHoras(fecha);
       }
-      
-      const supportRequests = {
-      	tooltip: {
-      		trigger: 'item'
-      	},
-      	legend: {
-      		orient: 'vertical',
-      		left: 'left'
-      	},
-      	series: [
-      		{
-      			name: 'Support Requests',
-      			type: 'pie',
-      			radius: '50%',
-      			data: [
-      				{ value: 300, name: 'Completada' },
-      				{ value: 50, name: 'Faltantes' },
-      				{ value: 100, name: 'Terminado' }
-      			],
-      			emphasis: {
-      				itemStyle: {
-      					shadowBlur: 10,
-      					shadowOffsetX: 0,
-      					shadowColor: 'rgba(0, 0, 0, 0.5)'
-      				}
-      			}
-      		}
-      	]
+    });
+
+    calendar.render();
+
+    var fechaActual = new Date();
+    var fechaActualStr = fechaActual.toISOString().split('T')[0];
+
+    cargarHoras(fechaActualStr);
+
+    function cargarHoras(fecha) {
+      var horasPorCompetencia = {
+        'Técnico en Programación de Software': [6, 7, 8, 5],
+        'Maquinaria Pesada': [4, 5, 6, 3],
+        'Técnico en Sistemas': [5, 8, 6, 7]
       };
-      
-      const salesChartElement = document.getElementById('salesChart');
-      const salesChart = echarts.init(salesChartElement, null, { renderer: 'svg' });
-      salesChart.setOption(salesData);
-      new ResizeObserver(() => salesChart.resize()).observe(salesChartElement);
-      
-      const supportChartElement = document.getElementById("supportRequestChart")
-      const supportChart = echarts.init(supportChartElement, null, { renderer: 'svg' });
-      supportChart.setOption(supportRequests);
-      new ResizeObserver(() => supportChart.resize()).observe(supportChartElement);
-    </script>
-    <!-- Google analytics script-->
-    <script type="text/javascript">
-      if(document.location.hostname == 'pratikborsadiya.in') {
-      	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      	ga('create', 'UA-72504830-1', 'auto');
-      	ga('send', 'pageview');
+
+      var competencias = [
+        { id: 287507, nombre: 'Técnico en Programación de Software' },
+        { id: 2406543, nombre: 'Maquinaria Pesada' },
+        { id: 285607, nombre: 'Técnico en Sistemas' }
+      ];
+
+      var horasDelDia = competencias.map(function(comp) {
+        return horasPorCompetencia[comp.nombre][Math.floor(Math.random() * 4)];
+      });
+
+      if (barChart) {
+        barChart.destroy();
       }
-    </script>
+
+      var ctxBar = document.getElementById('hoursChart').getContext('2d');
+      barChart = new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+          labels: competencias.map(comp => comp.id),
+          datasets: [{
+            label: 'Horas trabajadas el ' + fecha,
+            data: horasDelDia,
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function(tooltipItem) {
+                  var index = tooltipItem.dataIndex;
+                  var competencia = competencias[index];
+                  var value = tooltipItem.raw || 0;
+                  return `${competencia.nombre}: ${value} horas`;
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+  });
+</script>
+
+
+
+<style>
+  
+  /* CSS para resaltar la fecha seleccionada */
+  .fc-daygrid-day.fc-selected {
+    background-color: #f39c12; /* Cambia el color de fondo según tu preferencia */
+    color: white;
+  }
+
+  /* Elimina el subrayado en todo el calendario */
+  .fc-daygrid-day a {
+    text-decoration: none;
+  }
+
+  /* Elimina el subrayado de los días de la semana */
+  .fc-col-header-cell a {
+    text-decoration: none;
+  }
+
+  /* Cambia el color de fondo del día actual */
+  .fc-day-today {
+    background-color: #7C75F0 !important; /* Cambia el color de fondo según tu preferencia */
+    color: white !important; /* Opcional: cambia el color del texto */
+  }
+</style>
 
 </body>
 </html>

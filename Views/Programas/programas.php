@@ -28,11 +28,11 @@ headerAdmin($data);
                         <table class="table table-hover table-bordered" id="tableProgramas">
                             <thead class="table-success">
                                 <tr>
-                                    <th class="text-center">Código</th>
-                                    <th class="text-center">Nivel</th>
-                                    <th class="text-center">Programa</th>
-                                    <th class="text-center">Horas</th>
-                                    <th class="text-center">Acciones</th>
+                                    <th class="text-center"><i class="bi bi-123"></i>Código</th>
+                                    <th class="text-center"><i class="bi bi-clipboard-data"></i> Nivel</th>
+                                    <th class="text-center"><i class="bi bi-list-stars"></i> Programa</th>
+                                    <th class="text-center"><i class="bi bi-stopwatch"></i> Horas</th>
+                                    <th class="text-center"><i class="bi bi-eye-fill"></i> Acciones</th>
                                 </tr>
                             </thead>
                             <tbody class="table-group-divider text-center">

@@ -38,26 +38,24 @@ https://cdn.jsdelivr.net/npm/bootstrap-sweetalert@1.0.1/dist/sweetalert.min.css
 
             <form class="login-form" name="formLogin" id="formLogin" action="">
                 <h3 class="login-head"><i class="bi bi-person me-2"></i>Bienvenidos</h3>
-
-                 <i class="bi bi-person-fill boton1">
                     
                  </i>
 
-                 <div class="mb-3">
-                    <label class="form-label"></label>
-                    <input id="txtIdentificacion" name="txtIdentificacion" class="form-control" type="number"
-                        placeholder="Usuario">
-                </div>
+                 <div class="mb-3 position-relative">
+                 <label class="form-label"></label>
+                 <i class="bi bi-person-fill  icon-input boton1"></i>
+                 <input id="txtIdentificacion" name="txtIdentificacion" class="form-control" type="number" placeholder="Usuario">
+                 <div class="invalid-feedback">El usuario es incorrecto</div>
+                 </div>
 
-                <i class="bi bi-lock-fill boton2">
-                    
-                    </i>
+                
 
-                <div class="mb-3">
-                    <label class="form-label"></label>
-                    <input id="txtPassword" name="txtPassword" class="form-control" type="password"
-                        placeholder="Password">
-                </div>
+                    <div class="mb-3 position-relative">
+                 <label class="form-label"></label>
+                 <i class="bi bi-lock-fill  icon-input boton1"></i>
+                 <input id="txtPassword" name="txtPassword" class="form-control" type="password" placeholder="Password">
+                 <div class="invalid-feedback">La contraseña es incorrecta</div>
+                    </div>
 
                 <div id="alertLogin" class="text-center"></div>
 
