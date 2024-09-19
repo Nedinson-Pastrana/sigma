@@ -38,14 +38,38 @@ https://cdn.jsdelivr.net/npm/bootstrap-sweetalert@1.0.1/dist/sweetalert.min.css
         </div>
     </div>
 
+    
+
     <!-- Navbar-->
     <header class="app-header"><a class="app-header__logo" href="<?=base_url();?>/dashboard"><img src="<?=media();?>/images/logo dash 1.svg"></a>
         <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
             aria-label="Hide Sidebar"></a>
         <!-- Navbar Menu-->
+         
         <ul class="app-nav">
 
-            <!-- Menu Uusario -->
+         
+         <!-- boton del modo oscuro -->
+         <button class="toggle-button" aria-label="Alternar modo oscuro">
+        <svg class="toggle-icon sun"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="toggle-icon moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+    <!-- fin boton -->
+
+
+            <!-- Menu Usuario -->
             <li class="dropdown"><a class="app-nav__item" href="#" data-bs-toggle="dropdown"
                     aria-label="Open Profile Menu"><i class="bi bi-person fs-4"></i></a>
                 <ul class="dropdown-menu settings-menu dropdown-menu-right">
