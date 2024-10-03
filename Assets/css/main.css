@@ -300,6 +300,97 @@
 
 /* fin boton */
 
+/* ALERTA DEL LOGIN */
+
+ /* Fondo con opacidad y blur */
+ .alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  backdrop-filter: blur(4px); /* Efecto de desenfoque */
+  z-index: 9;
+  display: none; /* Oculto por defecto */
+}
+
+.alert-container {
+  position: fixed;
+  top: 50%; /* Ajusta la posición vertical */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el contenedor */
+  z-index: 10;
+  max-width: 90%; /* Ajusta el tamaño para que sea más grande y responsive */
+  width: 100%;
+  pointer-events: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  user-select: none; /* Evita la selección de texto o imágenes */
+    -webkit-user-drag: none; /* Evita que la imagen se pueda arrastrar en navegadores WebKit */
+    -moz-user-select: none; /* Evita la selección en Firefox */
+    -ms-user-select: none; /* Evita la selección en Internet Explorer/Edge */
+
+}
+
+.alert-image {
+   pointer-events: none; /* Desactiva la interacción con la imagen */
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  user-select: none; /* Evita la selección de texto o imágenes */
+    -webkit-user-drag: none; /* Evita que la imagen se pueda arrastrar en navegadores WebKit */
+    -moz-user-select: none; /* Evita la selección en Firefox */
+    -ms-user-select: none; /* Evita la selección en Internet Explorer/Edge */
+
+  
+}
+
+.close-btn {
+  position: absolute;
+  top: -15px; /* Ajusta la posición del botón de cierre */
+  right: -15px; /* Ajusta la posición del botón de cierre */
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  color: black;
+  font-size: 35px;
+  font-weight: bold; /* Hace la 'X' más gruesa */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+}
+
+@media (min-width: 576px) {
+  .alert-container {
+      max-width: 80%; /* Aumenta el tamaño en pantallas medianas */
+  }
+}
+
+@media (min-width: 768px) {
+  .alert-container {
+      max-width: 70%; /* Aumenta el tamaño en pantallas más grandes */
+  }
+}
+
+@media (min-width: 992px) {
+  .alert-container {
+      max-width: 65%; /* Aumenta el tamaño en pantallas grandes */
+  }
+}
+
+@media (min-width: 1200px) {
+  .alert-container {
+      max-width: 60%; /* Aumenta el tamaño en pantallas muy grandes */
+  }
+}
+
+
+
 
 *,
 *::before,
